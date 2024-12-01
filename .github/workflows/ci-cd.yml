@@ -27,7 +27,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           # 백엔드 이미지를 빌드하고 푸시
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend:${{ github.sha }} ./backend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend:${{ github.sha }} ./ONEHADA_BE
           docker push ${{ secrets.DOCKER_USERNAME }}/backend:${{ github.sha }}
           docker push ${{ secrets.DOCKER_USERNAME }}/backend:latest
 
